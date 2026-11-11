@@ -1,0 +1,42 @@
+{
+    "name": "lil-pins adder",
+    "version": "0.0.1",
+    "description": "Pin images on current page.",
+    "manifest_version": 3,
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "lil-pins@rodfireproductions",
+            "data_collection_permissions": {
+                "required": [
+                    "none"
+                ]
+            }
+        }
+    },
+    "permissions": [
+        "contextMenus",
+        "storage",
+        "scripting"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "icons": {
+        "48": "lil-pins-icon-48.png",
+        "128": "lil-pins-icon-128.png"
+    },
+    "action": {
+        "default_icon": "lil-pins-icon-128.png",
+        "default_title": "lil-pins adder"
+    },
+    "background": {
+        "service_worker": "background.js",
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": false
+    }
+}
